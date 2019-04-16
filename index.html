@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.10/vue.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="app">
+        <div class="players_cols">
+            <div class="player_bar">
+                <h1>{{ name = 'Player name' }}</h1>
+                <div class="hp_bar">
+                    <div class="hp_left_bar" :style="{width: playerHP + '%'}">{{ playerHP + ' HP'}}</div>
+                </div>
+            </div>
+            <div class="player_bar">
+                <h1>Monster</h1>
+                <div class="hp_bar">
+                    <div class="hp_left_bar" :style="{width: monsterHP + '%'}">{{ monsterHP + ' HP'}}</div>
+                </div>
+            </div>
+        </div>
+
+        <div class="choices_col">
+            <div class="hud">
+                <template v-if="!showGameMenu">
+                    <button @click="showGameMenu = !showGameMenu" :style="{width: 40 + '%'}">Start Game</button>
+                </template>
+                <template v-else>
+                    <button @click="action_attack">Attack</button>
+                    <button @click="action_specialAttack">Special Attack</button>
+                    <button @click="action_heal">Heal</button>
+                    <button @click="action_surrender">Surrender</button>
+                </template>
+            </div>
+        </div>
+
+        <div class="gameConsole" v-if="actionsMade.length > 0">
+            <ul>
+                <h2>Game Console</h2>
+                <li v-for="event in actionsMade" :class="{'monsterTurn' : !actionsMade.isPlayer, 'playerTurn' : actionsMade.isPlayer}">{{event.description}}</li>
+            </ul>
+        </div>
+    </div>
+
+</body>
+<script src="script.js"></script>
+
+</html>

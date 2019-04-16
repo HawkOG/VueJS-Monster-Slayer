@@ -1,0 +1,155 @@
+@font-face {
+    font-family: 'font042a5b44d6ff367136dd6584cf46d99b';
+        src:    url('https://nomail.com.ua/files/eot/042a5b44d6ff367136dd6584cf46d99b.eot?#iefix') format('embedded-opentype'),
+                url('https://nomail.com.ua/files/woff/042a5b44d6ff367136dd6584cf46d99b.woff') format('woff'),
+                url('https://nomail.com.ua/files/woff2/042a5b44d6ff367136dd6584cf46d99b.woff2') format('woff2');
+    }
+    @font-face { font-family: 'Graphik-Light';  src: local('Graphik-Light'), url('https://nomail.com.ua/files/woff/042a5b44d6ff367136dd6584cf46d99b.woff') format('woff'); }
+    #graphiklight { font-family:'Graphik-Light'; }
+    .font042a5b44d6ff367136dd6584cf46d99b { font-family: 'font042a5b44d6ff367136dd6584cf46d99b'; }
+    
+*{
+    font-family:'font042a5b44d6ff367136dd6584cf46d99b';
+}
+body{
+    background:url('https://unsplash.it/1920/1081');
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+
+.players_cols{
+    display:flex;
+    justify-content: center;
+    margin-top:5vh;
+    display:flex;
+    justify-content: center;
+    width:30%;
+    margin:20px auto;
+    background: #fff;
+    padding:10px;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,.3);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.3);
+    border-radius: 12px;
+    -webkit-transition: -webkit-box-shadow .5s cubic-bezier(.19,1,.22,1);
+    transition: -webkit-box-shadow .5s cubic-bezier(.19,1,.22,1);
+    transition: box-shadow .5s cubic-bezier(.19,1,.22,1);
+    transition: box-shadow .5s cubic-bezier(.19,1,.22,1),-webkit-box-shadow .5s cubic-bezier(.19,1,.22,1);
+    text-align: center;
+}
+
+h1{
+    color:#111;
+    margin:0;
+}
+.player_bar{
+    flex-basis:300px;
+    text-align: center;
+    padding:10px;
+}
+
+.hp_bar{
+    background: darkgreen;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.hp_left_bar{
+    width:100%;
+    background:green;
+    color:#fff;
+    transition: 250ms all;
+}
+
+.xp_bar{
+    background:purple;
+}
+
+.hud{
+    margin-top:5vh;
+    display:flex;
+    justify-content: center;
+    width:30%;
+    margin:20px auto;
+    background: #fff;
+    padding:10px;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,.3);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.3);
+    border-radius: 12px;
+    -webkit-transition: -webkit-box-shadow .5s cubic-bezier(.19,1,.22,1);
+    transition: -webkit-box-shadow .5s cubic-bezier(.19,1,.22,1);
+    transition: box-shadow .5s cubic-bezier(.19,1,.22,1);
+    transition: box-shadow .5s cubic-bezier(.19,1,.22,1),-webkit-box-shadow .5s cubic-bezier(.19,1,.22,1);
+    text-align: center;
+}
+    
+.hud button{
+    margin:10px 20px 10px 20px;
+    background:none;
+    padding:15px 20px;
+    width:25%;
+    border:1px solid #111;
+    border-radius:5px;
+    color:#111;
+    font-weight:bold;
+    transition: 250ms all;
+    cursor:pointer;
+}
+button:focus {outline:0;}
+.hud button:hover{
+    transform:scale(1.1355);
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,.3);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.3);
+}
+
+.gameConsole{
+    width:30%;
+    margin:20px auto;
+    background: #fff;
+    padding:10px;
+    -webkit-box-shadow: 0 1px 4px 0 rgba(0,0,0,.3);
+    box-shadow: 0 1px 4px 0 rgba(0,0,0,.3);
+    border-radius: 12px;
+    -webkit-transition: -webkit-box-shadow .5s cubic-bezier(.19,1,.22,1);
+    transition: -webkit-box-shadow .5s cubic-bezier(.19,1,.22,1);
+    transition: box-shadow .5s cubic-bezier(.19,1,.22,1);
+    transition: box-shadow .5s cubic-bezier(.19,1,.22,1),-webkit-box-shadow .5s cubic-bezier(.19,1,.22,1);
+    text-align: center;
+
+}
+ul{
+    padding:0;
+}
+li{
+    margin:10px 0;
+    font-size:10px;
+    list-style-type: none;
+    background:darkgreen;
+    animation-name:appearouttanowhere;
+    animation-duration: 0.5s;
+}
+
+@keyframes appearouttanowhere{
+    0%{
+        opacity: 0;
+        margin-top:-20px;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+
+.playerTurn{
+    background:lightgray;
+    color:#111;
+    border-bottom:1px solid #111;
+    padding:10px;
+}
+
+.monsterTurn{
+    background:gray;
+    color:#fff;
+    border-bottom:1px solid #111;
+    padding:10px;
+}
